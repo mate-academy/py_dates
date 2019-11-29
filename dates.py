@@ -1,7 +1,7 @@
 '''
 Module
 '''
-from datetime import datetime
+import datetime
 
 
 def dates_between(frst_dt: str, scnd_dt: str) -> int:
@@ -12,7 +12,7 @@ def dates_between(frst_dt: str, scnd_dt: str) -> int:
     :param scnd_dt:
     :return:
     '''
-    first_date = datetime.strptime(frst_dt, "%d.%m.%Y")
-    second_date = datetime.strptime(scnd_dt, "%d.%m.%Y")
+    first_date = datetime.datetime.strptime(frst_dt, "%d.%m.%Y")
+    second_date = datetime.datetime.strptime(scnd_dt, "%d.%m.%Y")
     delta = second_date - first_date
     return delta.days
