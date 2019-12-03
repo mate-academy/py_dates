@@ -14,4 +14,4 @@ def dates_between(first_date: str, second_date: str) -> int:
     date2 = datetime.datetime.strptime(second_date, '%d.%m.%Y')
     diff = datetime.timedelta()
     diff = date1 - date2
-    return diff.days
+    return abs(diff.days)
