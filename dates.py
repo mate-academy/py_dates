@@ -1,5 +1,6 @@
 """Calculating the difference between dates in days"""
 import datetime
+import numpy
 
 
 def dates_between(first_date: str, second_date: str) -> int:
@@ -12,8 +13,5 @@ def dates_between(first_date: str, second_date: str) -> int:
     date1 = datetime.datetime.strptime(first_date, '%d.%m.%Y')
     date2 = datetime.datetime.strptime(second_date, '%d.%m.%Y')
     diff = datetime.timedelta()
-    if date1 > date2:
-        diff = date1 - date2
-    else:
-        diff = date2 - date1
+    diff = date1 - date2
     return diff.days
